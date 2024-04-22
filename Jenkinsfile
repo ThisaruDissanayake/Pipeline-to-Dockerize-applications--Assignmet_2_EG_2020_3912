@@ -17,9 +17,9 @@ pipeline {
         }
         stage('Login to Docker Hub') {
             steps {
-                withCredentials([string(credentialsId: 'test-dockerhubpassword', variable: 'thiasarumitd')]) {
+                withCredentials([string(credentialsId: 'nodetestapp', variable: 'nodeapp')]) {
     // some block
-     bat'docker login -u thisarudissanayake -p ${thiasarumitd}'
+     bat'docker login -u thisarudissanayake -p ${nodeapp}'
 }
               
             }
